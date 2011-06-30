@@ -18,9 +18,18 @@ __PACKAGE__->meta->make_immutable;
 
 =pod
 
+=head1 DESCRIPTION
+
+This is an extension of L<Dist::Zilla::Plugin::InlineFiles>, providing
+the following files:
+
 =for :list
 * t/00-load.t
-A standard Test::UseAllModules test
+A basic L<Test::UseAllModules> test
+
+If a more sophisticated use of Test::UseAllModules is required, this plugin
+may not be for you. Please refer to the L<Test::UseAllModules> documentation
+for examples and more information.
 
 =cut
 
