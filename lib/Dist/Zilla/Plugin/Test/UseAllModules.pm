@@ -11,8 +11,16 @@ use Moose;
 use namespace::autoclean;
 
 extends 'Dist::Zilla::Plugin::InlineFiles';
+   with 'Dist::Zilla::Role::PrereqSource';
 
 __PACKAGE__->meta->make_immutable;
+
+sub register_prereqs {
+    shift->zilla->register_prereqs(
+        { phase => 'test' },
+        'Test::UseAllModules' => 0
+    );
+}
 
 1;
 
