@@ -20,6 +20,7 @@ sub register_prereqs {
         { phase => 'test' },
         'Test::UseAllModules' => 0
     );
+	return;
 }
 
 1;
@@ -38,6 +39,8 @@ A basic L<Test::UseAllModules> test
 If a more sophisticated use of Test::UseAllModules is required, this plugin
 may not be for you. Please refer to the L<Test::UseAllModules> documentation
 for examples and more information.
+
+=for Pod::Coverage register_prereqs
 
 =cut
 
